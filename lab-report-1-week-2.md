@@ -5,7 +5,7 @@ The VSCode installation is fairly straightforward.
 First download the installer from [Microsoft's Website](https://code.visualstudio.com/).
 Then use the default settings and install it.
 It should then open as seen below:  
-![](images/VSCode.png)
+![](images/lab1/VSCode.png)
 
 ## Remotely Connecting
 Next we will use ssh to connect to the ieng6 server.
@@ -15,18 +15,18 @@ Then run the command `ssh cs15lsp22xxx@ieng6.ucsd.edu` where
 retreived from ITS. Enter your password when prompted
 and you should successfully reach the main screen
 as seen below:  
-![](images/RemoteConnection.png)
+![](images/lab1/RemoteConnection.png)
 
 ## Trying Some Commands
 Now that we are logged into the remote system, 
 we can run some commands on it. I opted to try
 the ls -a command which lists all files including
 hidden files:  
-![](images/RunningCommands1.png)
+![](images/lab1/RunningCommands1.png)
 
 I also tried the pwd command which prints your
 current working directory:  
-![](images/RunningCommands2.png)
+![](images/lab1/RunningCommands2.png)
 
 ## Moving Files with SCP
 Now we want to get local files onto the remote
@@ -49,7 +49,7 @@ system by using SCP to copy the contents of the
 public key to ~/.ssh/authorized_keys. Now it should
 log into the server without requiring a password as seen
 below:  
-![](images/SSHKeyLogin.png)
+![](images/lab1/SSHKeyLogin.png)
 
 ## Optimizing Remote Running
 To optimize running code remotely, we avoid using
@@ -60,4 +60,4 @@ scp, the compilation, and run step to achieve the
 sub-4 second runtime that was required to copy, compile,
 and run WhereAmI with the command
 shown below:  
-![](images/Optimization.png)
+![](images/lab1/Optimization.png)
