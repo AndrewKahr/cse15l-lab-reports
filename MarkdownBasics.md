@@ -3,16 +3,27 @@
 ---
 * Testing
 * Bulletpoints
+* Here
+
+
 1. And
 2. Numbering
 3. System
+
+
 > This is a cool quote
+
+
 And `inline code`
+
+
 Or a codeblock
 ```
 print("hello world")
 print("multiline code")
 ```
+
+
 Cool **Bolded** and *Italics* sentence.
 
 [Link](https://docs.google.com/document/d/1Nw6gdehL-BzqjeVV1jzi_Ni4cdpx2uquLztLGTdzUdU/edit) to our lab document.
