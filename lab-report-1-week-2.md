@@ -20,11 +20,11 @@ as seen below:
 ## Trying Some Commands
 Now that we are logged into the remote system, 
 we can run some commands on it. I opted to try
-the ls -a command which lists all files including
+the `ls -a` command which lists all files including
 hidden files:  
 ![](images/lab1/RunningCommands1.png)
 
-I also tried the pwd command which prints your
+I also tried the `pwd` command which prints your
 current working directory:  
 ![](images/lab1/RunningCommands2.png)
 
@@ -46,8 +46,8 @@ Detailed instructions can be found in Microsoft's
 documentation [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
 Once the key is added, you need to add it to the remote
 system by using SCP to copy the contents of the
-public key to ~/.ssh/authorized_keys. Now it should
-log into the server without requiring a password as seen
+public key to `~/.ssh/authorized_keys`. Now it should
+log into the server using `ssh cs15lsp22acu@ieng6.ucsd.edu` without requiring a password as seen
 below:  
 ![](images/lab1/SSHKeyLogin.png)
 
@@ -58,6 +58,5 @@ to it as an argument. We also chain several commands
 together to avoid human delay. Thus we can chain together
 scp, the compilation, and run step to achieve the 
 sub-4 second runtime that was required to copy, compile,
-and run WhereAmI with the command
-shown below:  
+and run `WhereAmI` with the command `scp WhereAmI.java cs15lsp22acu@ieng6.ucsd.edu:~/ && ssh cs15lsp22acu@ieng6.ucsd.edu "javac WhereAmI.java && java WhereAmI"`
 ![](images/lab1/Optimization.png)
