@@ -32,7 +32,6 @@ This bug was caused due to not validating the indexes of the ending bracket and 
 
 ## Code Change 3
 ![Code Diff 3](images/LabReportWeek4/CodeDiff3.png)
-![Code Diff 4](images/LabReportWeek4/CodeDiff4.png)
 [Failure Inducing Test File](https://github.com/AndrewKahr/markdown-parser/blob/main/test-file4a.md)
 
 ### Symptom
@@ -50,4 +49,4 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
         at MarkdownParse.main(MarkdownParse.java:30)
 ```
 ### Description
-This bug is similar to the first bug, however in this case, it was now looking for opening/closing parenthesis that didn't exist for the first fake link. The markdown was designed specifically to trick the program into the infinite loop by denying it the second pair of parenthesis. To fix the issue, we modified the code to check whether it couldn't find another parenthesis and stop the loop if it can't. We also modified the code to continue after a closing bracket in that case since it otherwise would skip the second link since the parenthesis were attached to that link.
+This bug is similar to the first bug, however in this case, it was now looking for an opening parenthesis that didn't exist for the fake link. The markdown was designed specifically to trick the program into the infinite loop by denying it the expected parenthesis. To fix the issue, we modified the code to check whether it couldn't find another parenthesis and stop the loop if it can't.
