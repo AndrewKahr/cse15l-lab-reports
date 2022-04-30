@@ -49,4 +49,4 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
         at MarkdownParse.main(MarkdownParse.java:30)
 ```
 ### Description
-This bug is similar to the first bug, however in this case, it was now looking for an opening parenthesis that didn't exist for the fake link. The markdown was designed specifically to trick the program into the infinite loop by denying it the expected parenthesis. To fix the issue, we modified the code to check whether it couldn't find another parenthesis and stop the loop if it can't.
+This bug is similar to the first bug, however in this case, it was now looking for an opening parenthesis that didn't exist for the fake link. The markdown was designed specifically to trick the program into the infinite loop by denying it the expected parenthesis. Since there were no parenthesis, the parenthesis indexes were -1 which would cause the code to search from index 0 for the next token, which was the beginning of the file and thus throw it into an infinite loop. To fix the issue, we modified the code to check whether it couldn't find another parenthesis and stop the loop if it can't.
