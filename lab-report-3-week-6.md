@@ -9,25 +9,25 @@ I used notepad to edit my config as seen above.
 ![SCP Optimized](images/lab5/SCPOptimized.png)
 
 ## Setup Github Access from ieng6
-Public Key on Github
+Public Key on Github  
 ![Github SSH Key](images/lab5/GithubPublicSSHKey.png)
 
-Private Key on ieng6
+Private Key on ieng6  
 ![Github SSH Private Key](images/lab5/SSHPrivateKey.png)
 
-Committing and Pushing with SSH Key
+Committing and Pushing with SSH Key  
 ![Github with SSH](images/lab5/SSHGitInteraction.png)
 
 [Link to Commit](https://github.com/AndrewKahr/cse15l-lab-reports/commit/2d7ee8ad8490d2435a77edbc36bf5f8c5df0d355)
 
 ## Copy Whole Directories with `scp -r`
-SCP a whole directory and other files recursively
+SCP a whole directory and other files recursively  
 ![SCP Optimized](images/lab5/SCPOptimized.png)
 
-SSH into the system and compile
+SSH into the system and compile  
 ![SSH Compile](images/lab5/SSHCompile.png)
 
-SCP and Compilation in one command
+SCP and Compilation in one command  
 ![SCP Compile Single Command](images/lab5/SCPCompileSingleCommand.png)
 **Command to SCP and Compile the code in one step:**
 `ssh -t ieng6 "bash --login -c 'mkdir -p ~/markdown-parse'" && scp -r lib/ *.java *.md ieng6:~/markdown-parse && ssh -t ieng6 "bash --login -c 'cd markdown-parse && javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java && java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest'"` 
