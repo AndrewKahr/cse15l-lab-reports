@@ -10,7 +10,7 @@
 We expect `` `google.com``, `google.com`, `ucsd.edu`
 
 ## Snippet 2
-We expect `a.com`, `b.com`, `a.com(())`, `example.com`
+We expect `a.com`, `a.com(())`, `example.com`
 
 ## Snippet 3
 We expect `https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule`
@@ -33,8 +33,7 @@ We expect `https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule`
     @Test
     public void testReportSnippet2(){
         try {
-            assertEquals(List.of("a.com",
-                                 "b.com", 
+            assertEquals(List.of("a.com", 
                                  "a.com(())", 
                                  "example.com"), 
             MarkdownParse.getLinks(readString("reportSnippet2.md")));
@@ -70,7 +69,7 @@ java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was
 ## Snippet 2 Output
 ```
 2) testReportSnippet2(MarkdownParseTest)
-java.lang.AssertionError: expected:<[a.com, b.com, a.com(()), example.com]> but was:<[a.com, a.com((]>
+java.lang.AssertionError: expected:<[a.com, a.com(()), example.com]> but was:<[a.com, a.com((]>
         at org.junit.Assert.fail(Assert.java:89)
         at org.junit.Assert.failNotEquals(Assert.java:835)
         at org.junit.Assert.assertEquals(Assert.java:120)
@@ -115,7 +114,7 @@ java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was
 ## Snippet 2 Output
 ```
 2) testReportSnippet2(MarkdownParseTest)
-java.lang.AssertionError: expected:<[a.com, b.com, a.com(()), example.com]> but was:<[a.com, a.com((, example.com]>
+java.lang.AssertionError: expected:<[a.com, a.com(()), example.com]> but was:<[a.com, a.com((, example.com]>
         at org.junit.Assert.fail(Assert.java:89)
         at org.junit.Assert.failNotEquals(Assert.java:835)
         at org.junit.Assert.assertEquals(Assert.java:120)
