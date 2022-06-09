@@ -25,6 +25,7 @@ My Implementation Code:
 In my implementation, I need an additional check to see if the bracket is followed by an additional bracket and a colon. If it is, it should treat all text until the next space as the link, rather than have it give up when the opening parenthesis isn't found immediately after the closing bracket. I would also start breaking these checks into functions to make it more readable and make the logic more managable.
 
 # Test 32
+Neither implementation was correct.  
 My Implementation:  
 ![My Implementation](images/LabReportWeek10/Markdown32MyOutput.png)  
 Reference Implementation:  
